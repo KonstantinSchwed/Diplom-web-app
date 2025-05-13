@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="/Administrator/Personalaccount/css/paccount.css"> 
+    <link rel="icon" href="/Projectresources/logo good.png" type="image/x-icon">
+    <link rel="stylesheet" href="/node_modules/cropperjs/dist/cropper.min.css">
+    <script src="/node_modules/cropperjs/dist/cropper.min.js"></script>
+</head>
+<script defer src="/Administrator/Personalaccount/paccount.js"></script> 
+<body>
+    <div id="preloader">
+        <p>Загрузка. Пожалуйста, подождите</p>
+        <div class="dots">
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+          <span class="close-modal" id="close-modal">&times;</span>
+          <p class="modal-text" id="modal-text">
+          </p>
+          <div class="modal-buttons">
+            <button class="modal-button yes" id="confirm-yes">Ок</button>
+          </div>
+        </div>
+      </div>
+    <header>
+        <div class="loog"></div>
+        <p class="logtext">МЕДИЦИНСКАЯ<br>ИНИЦИАТИВА</p>
+        <p class="logtext2">ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО</p>
+    </header>
+    <div class="zclass">
+        <img src="/Projectresources/backlogo.png" alt="Логотип" class="mainclasslogo">
+    </div>
+    <div class="mainclass">
+            <div class="main_1_1">
+                <p class="text1">Личный кабинет</p>
+                <button class="buttonback">Назад в меню</button>
+            </div>
+            <div class="userlogoclass">
+                <p class="userlogotext">Доброе утро, Администратор</p>
+                <div class="userlogo">
+                    <img class="admin-icon" src="/Projectresources/iconsmall.png" alt="Admin Icon">
+                </div>
+            </div>
+            <div class="container">
+                <div class="profile-container">
+                    <div class="profile-section">
+                        <img class="photo-icon" src="/Projectresources/iconsmall.png" alt="Admin Icon">
+                        <p class="photo-t">Загрузите фото, так вас <br> быстрее запомнят =)<br> (не более 5 МБ)</p>
+                        
+                        <!-- Скрытый input для выбора изображения -->
+                        <input type="file" class="file-input" accept="image/*" style="display:none;">
+                        
+                        <div class="image-container">
+                            <!-- Изображение профиля, которое будет обрезано -->
+                            <img class="profile-image" src="" alt="Profile" style="width: 30vh; height: 32vh; object-fit: cover; display:none;">
+                        </div>
+                        
+                        <!-- Кнопка для сохранения основного изображения -->
+                        <button class="save-main-image" style="display:none;">Сохранить изображение</button> 
+                        
+                        <!-- Кнопка для сохранения миниатюры -->
+                        <button class="save-miniature-image" style="display:none;">Сохранить миниатюру</button>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="title">ИНФОРМАЦИЯ ОБ АДМИНИСТРАТОРЕ</h1>
+                        <div class="info-section">
+                            <div class="left">
+                                <label>Фамилия</label>
+                                <input type="text" class="surname" >
+                                 
+                                <label>Имя</label>
+                                <input type="text" class="name" >
+                                 
+                                <label>Отчество</label>
+                                <input type="text" class="fathername" >
+                            </div>
+                            <div class="right">
+                                <label>Пол</label>
+                                <select class="sex" >
+                                    <option value="мужской">Мужской</option>
+                                    <option value="женский">Женский</option>
+                                    <option value="none">Не указан</option>
+                                </select>
+                                 
+                                <label>Дата рождения</label>
+                                <input type="date" class="birth" >
+                            </div>
+                        </div>
+                
+                        <div class="buttons">
+                            <button class="deleteimg" style="display:none;">Сбросить изображение</button>
+                            <button class="save">Сохранить</button>
+                            <button class="reset">Сбросить информацию</button>
+                        </div>
+                    </div>
+                </div>
+               <div class="password-container">
+                <div class="title-container">
+                    <h3>Изменение пароля</h3>
+                    <button class="reset-original-password">Сбросить на исходный пароль</button>
+                </div>
+
+                <label for="current-password">Введите текущий пароль</label>
+                <div class="input-wrapper">
+                    <input type="password" id="current-password">
+                    <p class="error-message" style="display: none;"></p>
+                </div>
+                
+                <label for="new-password">Введите НОВЫЙ пароль</label>
+                <div class="input-wrapper">
+                    <input type="password" id="new-password">
+                    <button class="save-password-btn">Сохранить</button>
+                </div>
+            </div>       
+                <button class="logout">Выйти из кабинета</button>
+            </div>
+    <footer class="footer">
+        <div class="clickable-footer">
+            <p class="footertext">Пользовательское соглашение</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

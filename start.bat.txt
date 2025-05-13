@@ -1,0 +1,8 @@
+@echo off
+echo Установка зависимостей...
+npm install
+
+echo Запуск сервера...
+npm start
+
+pause

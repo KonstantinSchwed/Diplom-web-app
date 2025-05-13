@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Программа обучения</title>
+    <link rel="stylesheet" href="/Administrator/Adminchapter/css/achapter.css"> 
+    <link rel="icon" href="/Projectresources/logo good.png" type="image/x-icon">
+    <script src="/node_modules/quill/dist/quill.js"></script>
+    <link rel="stylesheet" href="/node_modules/quill/dist/quill.snow.css">
+    <script src="/node_modules/file-saver/dist/FileSaver.min.js"></script>
+    <script src="/node_modules/docx/dist/index.iife.js"></script>
+    <script src="/node_modules/mammoth/mammoth.browser.min.js"></script>
+    <script defer src="/Administrator/Adminchapter/achapter.js"></script> 
+</head>
+<body>
+    <div id="preloader">
+        <p>Загрузка. Пожалуйста, подождите</p>
+        <div class="dots">
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+          <span class="close-modal" id="close-modal">&times;</span>
+          <p class="modal-text" id="modal-text"></p>
+          <div class="modal-buttons">
+            <button class="modal-button yes" id="confirm-yes">Ок</button>
+          </div>
+        </div>
+      </div> 
+      <div class="modal-overlay" id="confirmation-modal-overlay">
+        <div class="modal">
+            <span class="close-modal" id="close-confirmation-modal">&times;</span>
+            <p class="modal-text" id="confirmation-modal-text"></p>
+            <div class="modal-buttons">
+                <button class="modal-button yes" id="confirm-yes-yes">Да</button>
+                <button class="modal-button no" id="cancel-yes">Нет</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modal-overlay-input">
+    <div class="modal">
+        <span class="close-modal" id="close-modal-input">&times;</span>
+        <p class="modal-text" id="modal-label"></p>
+        <input id="modal-input" type="text" class="modal-input" />
+        <div class="modal-buttons">
+        <button class="modal-button yes" id="confirm-input">Ок</button>
+        <button class="modal-button no" id="cancel-input">Отмена</button>
+        </div>
+    </div>
+    </div>
+    <header>
+        <div class="loog"></div>
+        <p class="logtext">МЕДИЦИНСКАЯ<br>ИНИЦИАТИВА</p>
+        <p class="logtext2">ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО</p>
+    </header>
+    <div class="zclass">
+        <img src="/Projectresources/backlogo.png" alt="Логотип" class="mainclasslogo">
+    </div>
+    <div class="mainclass">
+            <div class="main_1_1">
+                <div class="starterblockname">
+                    <p class="text1">Раздел "<span class="text1span">Для справки</span>"</p>
+                    <img class="namechangerchapter" src="/Projectresources/icons8-карандаш-96.png" alt="Описание изображения" class="centered-image">
+                </div>
+                <div class="buttons-container">
+                    <button class="buttonback">Назад в меню</button>
+                    <button class="buttonback2">Вернуться к модулям</button>
+                </div>
+            </div>
+            <div class="userlogoclass">
+                <p class="userlogotext">Доброе утро, Администратор</p>
+                <div class="userlogo">
+                    <img class="admin-icon" src="/Projectresources/iconsmall.png" alt="Admin Icon">
+                </div>
+            </div>
+            <div class="container">
+                <p class="chapterintro">Вы можете добавлять текст, изображения и контрольный тест</p>
+                <div class="maineditor">
+                    <div id="buttonsContainer2" class="buttons-container2">
+                     <button id="fullscreenToggle">Полноэкранный режим</button>
+                     <button id="saveWord">Сохранить в Word</button>
+                     <button id="saveDB">Сохранить в БД</button>
+                     <label class="file-label" >Загрузить файл (Word):</label>
+                     <input type="file" id="uploadWord" class="file-input" accept=".docx" />
+                     <label class="file-label">Загрузить аудио (Установите курсор на поле):</label>
+                     <input type="file" id="audioUpload" class="file-input" accept="audio/*">
+                 </div>
+                    <div id="editor-wrapper">
+                        <div id="editor-container"></div>
+                    </div>
+                </div>
+                <div class="endline-wrapper">
+                    <button class="addtestchapter">Добавить тест</button>
+                    <div class="radioWrapper">
+                    <p class="radiochecktext">Необходимо помечать <br>как прочитанное</p>
+                    <input type="radio" class="readVisibilityRadio">
+                    </div>
+                    <p class="giventime">Время на прочтение: <span class="timetoread">15 минут</span></p>
+                    <button class="changetimetoread">Изменить</button>
+                </div>
+            </div>
+    <footer class="footer">
+        <div class="clickable-footer">
+            <p class="footertext">Пользовательское соглашение</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
