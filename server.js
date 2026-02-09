@@ -3191,6 +3191,7 @@ app.post('/logout', (req, res) => {
     res.clearCookie('authToken');
     res.json({ success: true });
 });
+// end game
 server.listen(port, '192.168.100.2', () => {
     console.log(`HTTP/WebSocket сервер доступен по адресу http://192.168.100.2:${port}`);
 });
