@@ -3114,18 +3114,15 @@ app.post('/get-unread-messages', (req, res) => {
         }
 
         if (result.length === 0) {
-            return res.json({ success: true, messages: [] }); // Нет непрочитанных сообщений
+            return res.json({ success: true, messages: [] });
         }
 
-        // Считаем уникальных отправителей
         const unreadFromUsers = [];
         result.forEach(msg => {
             if (!unreadFromUsers.includes(msg.sender_id)) {
                 unreadFromUsers.push(msg.sender_id);
             }
         });
-
-        // Возвращаем количество уникальных отправителей
         return res.json({ success: true, messages: unreadFromUsers });
     });
 });
