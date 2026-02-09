@@ -3192,7 +3192,6 @@ app.post('/logout', (req, res) => {
     res.json({ success: true });
 });
 // hello there
-//hello there 2
 //hello there 3
 server.listen(port, '192.168.100.2', () => {
     console.log(`HTTP/WebSocket сервер доступен по адресу http://192.168.100.2:${port}`);
