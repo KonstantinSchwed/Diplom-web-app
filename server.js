@@ -3194,8 +3194,14 @@ app.post('/logout', (req, res) => {
     res.clearCookie('authToken');
     res.json({ success: true });
 });
+//tsdfdsfdsf
+//nsdfdsf
+//tests
+//newtest32
 //tests
 //newtest32
 server.listen(port, '192.168.100.2', () => {
     console.log(`HTTP/WebSocket сервер доступен по адресу http://192.168.100.2:${port}`);
 });
+//tests
+//newtest32
